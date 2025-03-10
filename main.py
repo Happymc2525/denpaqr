@@ -21,7 +21,7 @@ async def qr(
   img.save('qr.png')
   await ctx.respond(f'{data}', file=discord.File('qr.png'))
 
-@bot.slash_command(description="ランダムQRコード(プライベート)")
+@bot.slash_command(description="QRコード生成(プライベート)")
 async def sqr(
   ctx: discord.ApplicationContext,
   data: Option(str, required=False, description="データ指定")
