@@ -1,5 +1,7 @@
 # QRキャッチ用のQRコード生成Bot
 
+ボタン一つでQRコードを再生成する機能を追加予定です。
+
 [Botの招待リンクはこちら](https://discord.com/oauth2/authorize?client_id=1348466781572038699&permissions=0&integration_type=0&scope=bot)
 
 使い方
