@@ -1,5 +1,6 @@
 import discord
 from discord import Option
+from discord.ui import Button, Select, View
 import random
 import string
 import qrcode
@@ -11,7 +12,7 @@ bot = discord.Bot(intents=discord.Intents.all())
 async def on_ready():
     print(f"{bot.user} 起動しました")
 
-@bot.slash_command(description="ランダムQRコード")
+@bot.slash_command(description="QRコード生成")
 async def qr(
     ctx: discord.ApplicationContext,
     data: Option(str, required=False, description="データ指定")
@@ -49,7 +50,7 @@ async def qr(
     msg = await ctx.respond(content=qr_data, file=discord.File("qr.png"), view=QRButtonView())
 
 
-@bot.slash_command(description="ランダムQRコード")
+@bot.slash_command(description="QRコード生成(プライベート)")
 async def sqr(
     ctx: discord.ApplicationContext,
     data: Option(str, required=False, description="データ指定")
